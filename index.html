@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>6
+<body>
+    <h1 style="color: rgb(13, 138, 227) ;">Arix Eshan </h1>
+    
+
+   
+<div class="Calculator-body">
+    <table>
+        <tr>
+            
+            <td colspan="4"><input type="text"  id="result"></td>
+        </tr>
+      
+        <tr>
+            <td><input style="background-color: red;" type="button" value="Ac" onclick="deleteMe()"></td>
+            <td><input style="background-color: rgba(247, 151, 8, 0.928);"  type="button" value="+/-"onclick="calculatotr('+/')"></td>
+            <td><input style="background-color: rgba(247, 151, 8, 0.928);" type="button" value="%"  onclick="calculatotr('%')"></td>  
+            <td><input style="background-color: rgba(247, 151, 8, 0.928);" type="button" value="/"  onclick="calculatotr('/')"></td>  
+        </tr>
+
+        <tr>
+            <td><input type="button" value="7" onclick="calculatotr('7')"></td>
+            <td><input type="button" value="8" onclick="calculatotr('8')"></td>
+            <td><input type="button" value="9" onclick="calculatotr('9')"></td>  
+            <td><input style="background-color: rgba(247, 151, 8, 0.928);" type="button" value="*" onclick="calculatotr('*')"></td>  
+        </tr>
+
+        <tr>
+            <td><input type="button" value="4" onclick="calculatotr('4')"></td>
+            <td><input type="button" value="5" onclick="calculatotr('5')"></td>
+            <td><input type="button" value="6" onclick="calculatotr('6')"></td>  
+            <td><input style="background-color: rgba(247, 151, 8, 0.928);" type="button" value="-" onclick="calculatotr('-')"></td>  
+        </tr>
+
+        <tr>
+            <td><input type="button" value="1" onclick="calculatotr('1')"></td>
+            <td><input type="button" value="2" onclick="calculatotr('2')"></td>
+            <td><input type="button" value="3" onclick="calculatotr('3')"></td>  
+            <td><input style="background-color: rgba(247, 151, 8, 0.928);" type="button" value="+" onclick="calculatotr('+')"></td>  
+        </tr>
+
+        <tr>
+            <td><input type="button" value="0" onclick="calculatotr('0')"></td>
+            <td><input type="button" value="" onclick="calculatotr()"></td>
+            <td><input type="button" value="." onclick="calculatotr('.')"></td>  
+            <td><input style="background-color: rgba(0, 0, 0, 0.928);" type="button" value="=" onclick="result('=')"></td>  
+        </tr>
+
+    
+    </table>
+
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+    function calculatotr(newvalue) {
+        document.getElementById("result").value += newvalue;
+    }
+
+    function deleteMe(){
+        document.getElementById("result").value = "";
+    }
+    function result(){
+        var a =  document.getElementById("result").value;
+        var b = eval(a);
+        document.getElementById("result").value =b;
+    }
+</script>
+</body>
+</html>
